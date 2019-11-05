@@ -1,0 +1,31 @@
+.custom-button {
+  width: auto;
+  height: 50px;
+  margin: 10px;
+  letter-spacing: 0.5px;
+  border: 1px solid black;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Open Sans Condensed";
+  font-weight: bolder;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+  &.googleSignIn {
+    background-color: royalblue;
+    color: white;
+    border: 1px solid royalblue;
+    &:hover {
+      background-color: #fff;
+      color: royalblue;
+    }
+  }
+}
