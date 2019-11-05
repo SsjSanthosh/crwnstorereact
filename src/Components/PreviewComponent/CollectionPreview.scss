@@ -1,0 +1,25 @@
+.CollectionPreview {
+  width: 90vw;
+  margin: 0 auto;
+  &Title {
+    text-align: center;
+  }
+  &Items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  &Item {
+    min-width: 270px;
+    flex: 1 1 auto;
+    &:h3 {
+      display: inline-block;
+    }
+  }
+  &Content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem;
+  }
+}

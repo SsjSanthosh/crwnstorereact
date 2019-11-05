@@ -1,0 +1,41 @@
+.MenuItem {
+  border: 2px solid black;
+  min-width: 30%;
+  flex: 1 1 auto;
+  height: 300px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    background-size: 120%;
+  }
+  @media only screen and (max-width: 1450px) {
+    min-width: 300px;
+  }
+  @media only screen and (max-width: 1110px) {
+    height: 250px;
+  }
+
+  &Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+  }
+}
+
+.large {
+  height: 400px;
+  @media only screen and (max-width: 1110px) {
+    height: 250px;
+  }
+}
