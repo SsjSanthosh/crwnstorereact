@@ -1,0 +1,12 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5rem;
+  &Links {
+    display: flex;
+    width: 20%;
+    justify-content: space-evenly;
+    font-size: 2rem;
+  }
+}

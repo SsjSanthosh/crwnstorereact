@@ -4,3 +4,11 @@ html {
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: 200;
 }
+
+a,
+a:hover,
+a:visited,
+a:focus {
+  text-decoration: none;
+  color: black;
+}

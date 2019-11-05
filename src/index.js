@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import Header from "./Components/Header/Header";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 
 ReactDOM.render(
   <BrowserRouter>
+    <Header />
     <App />
   </BrowserRouter>,
   document.getElementById("root")
