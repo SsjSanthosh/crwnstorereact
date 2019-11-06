@@ -1,5 +1,17 @@
 .Signin {
-  width: 70vw;
-  margin: 0 auto;
+  width: 50%;
+
   text-align: center;
+  &Page {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.Register {
+  width: 50%;
+  > button {
+    background-color: #fff;
+  }
 }

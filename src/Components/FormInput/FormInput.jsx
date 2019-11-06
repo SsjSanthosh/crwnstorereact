@@ -7,6 +7,8 @@ export default function FormInput(props) {
         className="form-input"
         onChange={props.handleChange}
         type={props.type}
+        required={props.required}
+        name={props.name}
       />
 
       {props.label ? (
