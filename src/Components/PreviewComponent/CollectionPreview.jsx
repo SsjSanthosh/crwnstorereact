@@ -1,6 +1,13 @@
 import React from "react";
 import "./CollectionPreview.scss";
-export default function CollectionPreview(props) {
+import Button from "../Buttons/Button";
+import { connect } from "react-redux";
+import { addItem } from "../../redux/cart/cart-actions";
+function CollectionPreview(props) {
+  const handleCartAdd = item => {
+    console.log("here");
+  };
+  const { addItem } = props;
   return (
     <div className="CollectionPreview">
       <h1 className="CollectionPreviewTitle">{props.title.toUpperCase()}</h1>
@@ -12,9 +19,27 @@ export default function CollectionPreview(props) {
               <h3>{item.name}</h3>
               <h3>{item.price} INR</h3>
             </div>
+            <div
+              onClick={() => {
+                props.addItem(item);
+                console.log(item);
+              }}
+            >
+              {}
+              <Button value="Add to cart" inverted={true}></Button>
+            </div>
           </div>
         ))}
       </div>
     </div>
   );
 }
+
+const mapDispatchToProps = dispatch => ({
+  addItem: item => dispatch(addItem(item))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(CollectionPreview);

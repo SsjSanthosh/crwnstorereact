@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./ShopPage.scss";
-import shopData from "./shopdata";
+import shopData from "../../shopdata";
 import CollectionPreview from "../../Components/PreviewComponent/CollectionPreview";
 import { tsImportType } from "@babel/types";
 export default class ShopPage extends Component {

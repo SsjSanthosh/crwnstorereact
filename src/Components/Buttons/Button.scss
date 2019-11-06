@@ -28,4 +28,16 @@
       color: royalblue;
     }
   }
+  &.inverted {
+    background-color: white;
+    color: black;
+    width: 50%;
+    transform: translateY(-350%);
+    opacity: 0;
+    transition: all 300ms;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
 }
