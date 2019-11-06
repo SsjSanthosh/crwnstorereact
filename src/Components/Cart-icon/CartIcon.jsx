@@ -1,22 +1,31 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import { ReactComponent as Cart } from "../../assets/shopping-bag.svg";
 import { toggleCart } from "../../redux/cart/cart-actions";
 import { connect } from "react-redux";
 import "./CartIcon.scss";
-function CartIcon({ toggleCart }) {
-  return (
-    <div className="cart-icon" onClick={toggleCart}>
-      <Cart className="shopping-icon" />
-      <span className="item-count">0</span>
-    </div>
-  );
+class CartIcon extends PureComponent {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    const { itemCount, toggleCart } = this.props;
+    console.log("icon count", itemCount);
+    return (
+      <div className="cart-icon" onClick={toggleCart}>
+        <Cart className="shopping-icon" />
+        <span className="item-count">{itemCount}</span>
+      </div>
+    );
+  }
 }
 
 const mapDispatchToProps = dispatch => ({
   toggleCart: () => dispatch(toggleCart)
 });
-
+const mapStateToProps = ({ cart: { cartItems } }) => ({
+  itemCount: cartItems.reduce((acc, item) => acc + item.quantity, 0)
+});
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps(toggleCart)
 )(CartIcon);

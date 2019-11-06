@@ -7,6 +7,7 @@ import Header from "./Components/Header/Header";
 import Homepage from "./Pages/Homepage/Homepage";
 import ShopPage from "./Pages/Shoppage/ShopPage";
 import Signin from "./Pages/Signin/Signin";
+import Checkout from "./Pages/Checkout/Checkout";
 import { auth, createUserProfile } from "./firebase/firebase.utils";
 class App extends Component {
   unsubscribeFromAuth = null;
@@ -50,6 +51,7 @@ class App extends Component {
               this.props.currentUser ? <Redirect to="/" /> : <Signin />
             }
           />
+          <Route exact path="/checkout" component={Checkout} />
         </Switch>
       </div>
     );
