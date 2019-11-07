@@ -16,7 +16,7 @@ function Category(props) {
   let data = collections.find(c => c.id === category);
 
   let collection = data.items;
-  console.log(collection);
+
   return (
     <div>
       <div className="CollectionPreview">
@@ -34,7 +34,6 @@ function Category(props) {
               <div
                 onClick={() => {
                   addItem(item);
-                  console.log(item);
                 }}
               >
                 {}

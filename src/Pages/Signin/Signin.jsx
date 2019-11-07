@@ -21,12 +21,10 @@ export default class Signin extends Component {
   handleSubmit = async e => {
     e.preventDefault();
     const { email, password } = this.state;
-    console.log(email, password);
+
     try {
       const { user } = auth.signInWithEmailAndPassword(email, password);
-    } catch (err) {
-      console.log(err);
-    }
+    } catch (err) {}
   };
   render() {
     return (

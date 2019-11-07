@@ -4,9 +4,6 @@ import Button from "../Buttons/Button";
 import { connect } from "react-redux";
 import { addItem } from "../../redux/cart/cart-actions";
 function CollectionPreview(props) {
-  const handleCartAdd = item => {
-    console.log("here");
-  };
   const { addItem } = props;
   return (
     <div className="CollectionPreview">
@@ -22,7 +19,6 @@ function CollectionPreview(props) {
             <div
               onClick={() => {
                 props.addItem(item);
-                console.log(item);
               }}
             >
               {}

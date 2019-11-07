@@ -32,9 +32,7 @@ export const createUserProfile = async (userAuth, displayName) => {
         createdAt,
         displayName
       });
-    } catch (err) {
-      console.log("error creating data");
-    }
+    } catch (err) {}
   }
   return userRef;
 };

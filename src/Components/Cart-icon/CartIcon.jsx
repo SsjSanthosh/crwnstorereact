@@ -9,7 +9,7 @@ class CartIcon extends PureComponent {
   }
   render() {
     const { itemCount, toggleCart } = this.props;
-    console.log("icon count", itemCount);
+
     return (
       <div className="cart-icon" onClick={toggleCart}>
         <Cart className="shopping-icon" />

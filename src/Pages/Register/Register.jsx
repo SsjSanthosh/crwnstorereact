@@ -27,16 +27,14 @@ export default class Register extends Component {
       alert("passwords dont match");
       return;
     }
-    console.log(email);
+
     try {
       const { user } = await auth.createUserWithEmailAndPassword(
         email,
         password
       );
       await createUserProfile(user, { displayName });
-    } catch (err) {
-      console.log(err);
-    }
+    } catch (err) {}
 
     this.setState({
       displayName: "",

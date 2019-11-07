@@ -11,7 +11,7 @@ class ShopPage extends Component {
   }
   render() {
     const { collections, match } = this.props;
-    console.log(match.path);
+
     return (
       <div>
         {" "}

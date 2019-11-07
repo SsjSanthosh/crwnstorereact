@@ -4,7 +4,6 @@ export default function StripeButton({ price }) {
   const stripePrice = price * 100;
   const publicKey = "pk_test_TeTxwavklHr79V5vrO6geXCB00kc1x8R5m";
   const onToken = token => {
-    console.log(token);
     alert("Payment Successful!");
   };
   return (
