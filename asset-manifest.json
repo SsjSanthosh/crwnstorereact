@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/crwnstorereact/static/css/main.ae7fe1f2.chunk.css",
+    "main.js": "/crwnstorereact/static/js/main.55f040a4.chunk.js",
+    "main.js.map": "/crwnstorereact/static/js/main.55f040a4.chunk.js.map",
+    "runtime-main.js": "/crwnstorereact/static/js/runtime-main.a2bb5a08.js",
+    "runtime-main.js.map": "/crwnstorereact/static/js/runtime-main.a2bb5a08.js.map",
+    "static/js/2.09b6af4a.chunk.js": "/crwnstorereact/static/js/2.09b6af4a.chunk.js",
+    "static/js/2.09b6af4a.chunk.js.map": "/crwnstorereact/static/js/2.09b6af4a.chunk.js.map",
+    "index.html": "/crwnstorereact/index.html",
+    "precache-manifest.c38550df997450a321b364722634d95c.js": "/crwnstorereact/precache-manifest.c38550df997450a321b364722634d95c.js",
+    "service-worker.js": "/crwnstorereact/service-worker.js",
+    "static/css/main.ae7fe1f2.chunk.css.map": "/crwnstorereact/static/css/main.ae7fe1f2.chunk.css.map",
+    "static/media/crown.ed28accb.svg": "/crwnstorereact/static/media/crown.ed28accb.svg",
+    "static/media/shopping-bag.30f07071.svg": "/crwnstorereact/static/media/shopping-bag.30f07071.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2bb5a08.js",
+    "static/js/2.09b6af4a.chunk.js",
+    "static/css/main.ae7fe1f2.chunk.css",
+    "static/js/main.55f040a4.chunk.js"
+  ]
+}
