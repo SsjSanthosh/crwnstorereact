@@ -1,28 +1,29 @@
 import React, { Component } from "react";
 import "./ShopPage.scss";
-import shopData from "../../shopdata";
+import { Route } from "react-router-dom";
 import CollectionPreview from "../../Components/PreviewComponent/CollectionPreview";
-import { tsImportType } from "@babel/types";
-export default class ShopPage extends Component {
+import { connect } from "react-redux";
+import CollectionOverview from "../CollectionOverview/CollectionOverview";
+import Category from "../Category/Category";
+class ShopPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      collection: shopData
-    };
   }
   render() {
-    const { collection } = this.state;
+    const { collections, match } = this.props;
+    console.log(match.path);
     return (
       <div>
-        <h1>Shop Page</h1>
-        {collection.map(item => (
-          <CollectionPreview
-            title={item.title}
-            items={item.items}
-            key={item.id}
-          />
-        ))}
+        {" "}
+        <Route path={`${match.path}/:category`} component={Category} />
+        <Route exact path={`${match.path}`} component={CollectionOverview} />
       </div>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  collections: state.shop.collections
+});
+
+export default connect(mapStateToProps)(ShopPage);

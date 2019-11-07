@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 
 const cartReducer = (state = INITIAL_STATE, action) => {
   const newState = [...state.cartItems, action.payload];
-  console.log("items = ", newState);
+
   switch (action.type) {
     case "TOGGLE_CART":
       return {
