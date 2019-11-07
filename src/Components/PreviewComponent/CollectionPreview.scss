@@ -13,7 +13,10 @@
   &Item {
     min-width: 270px;
     display: relative;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
+    @media only screen and (max-width: 616px) {
+      flex: 1 1 auto;
+    }
     &:hover .inverted {
       opacity: 0.7;
     }

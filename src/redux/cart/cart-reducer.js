@@ -6,8 +6,6 @@ const INITIAL_STATE = {
 };
 
 const cartReducer = (state = INITIAL_STATE, action) => {
-  const newState = [...state.cartItems, action.payload];
-
   switch (action.type) {
     case "TOGGLE_CART":
       return {
@@ -22,7 +20,7 @@ const cartReducer = (state = INITIAL_STATE, action) => {
     case "CLEAR_ITEM":
       return {
         ...state,
-        cartItems: state.cartItems.filter(item => item.id != action.payload.id)
+        cartItems: state.cartItems.filter(item => item.id !== action.payload.id)
       };
     case "REMOVE_ITEM":
       return {

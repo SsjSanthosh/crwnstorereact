@@ -11,14 +11,14 @@ function CollectionPreview(props) {
       <div className="CollectionPreviewItems">
         {props.items.slice(0, 4).map(item => (
           <div className="CollectionPreviewItem">
-            <img src={item.imageUrl} />
+            <img src={item.imageUrl} alt={item.name} />
             <div className="CollectionPreviewContent">
               <h3>{item.name}</h3>
               <h3>{item.price} INR</h3>
             </div>
             <div
               onClick={() => {
-                props.addItem(item);
+                addItem(item);
               }}
             >
               {}

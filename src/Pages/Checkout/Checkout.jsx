@@ -6,9 +6,6 @@ import CheckoutItem from "../../Components/Checkout-item/CheckoutItem.jsx";
 import StripeButton from "../../Components/StripeButton/StripeButton";
 
 class Checkout extends PureComponent {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { totalPrice, cartItems } = this.props;
     const items = cartItems.map(item => (

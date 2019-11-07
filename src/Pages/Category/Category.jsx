@@ -1,5 +1,5 @@
 import React from "react";
-import CollectionPreview from "../../Components/PreviewComponent/CollectionPreview";
+
 import Button from "../../Components/Buttons/Button";
 import { addItem } from "../../redux/cart/cart-actions";
 import { connect } from "react-redux";
@@ -7,8 +7,8 @@ function Category(props) {
   const { match, collections, addItem } = props;
   const mapStringToId = {
     hats: 1,
-    jackets: 2,
-    sneakers: 3,
+    jackets: 3,
+    sneakers: 2,
     women: 4,
     men: 5
   };
@@ -26,7 +26,7 @@ function Category(props) {
         <div className="CollectionPreviewItems">
           {collection.map(item => (
             <div className="CollectionPreviewItem">
-              <img src={item.imageUrl} />
+              <img src={item.imageUrl} alt={item.name} />
               <div className="CollectionPreviewContent">
                 <h3>{item.name}</h3>
                 <h3>{item.price} INR</h3>

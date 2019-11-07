@@ -2,7 +2,6 @@ import React from "react";
 import "./MenuItem.scss";
 import { Link } from "react-router-dom";
 export default function MenuItem({ title, url, large }) {
-  console.log();
   return (
     <div
       className={`MenuItem ${large ? "large" : ""}`}

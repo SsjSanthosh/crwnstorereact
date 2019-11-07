@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import "./App.css";
 import setCurrentUser from "./redux/user/user-actions";
@@ -18,15 +18,12 @@ class App extends Component {
       if (user) {
         const userRef = await createUserProfile(user);
         userRef.onSnapshot(snapshot => {
-          setCurrentUser(
-            {
-              currentUser: {
-                id: snapshot.id,
-                ...snapshot.data()
-              }
-            },
-            () => console.log(this.state.currentUser)
-          );
+          setCurrentUser({
+            currentUser: {
+              id: snapshot.id,
+              ...snapshot.data()
+            }
+          });
         });
       } else {
         setCurrentUser(user);

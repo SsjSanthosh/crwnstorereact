@@ -29,8 +29,7 @@ export const createUserProfile = async (userAuth, displayName) => {
       await userRef.set({
         displayName,
         email,
-        createdAt,
-        displayName
+        createdAt
       });
     } catch (err) {}
   }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import MenuItem from "../MenuItem/MenuItem";
 import "./MenuDirectory.scss";
-import { Link } from "react-router-dom";
+
 export default class MenuDirectory extends Component {
   constructor(props) {
     super(props);

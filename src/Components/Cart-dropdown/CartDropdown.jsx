@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import CartItem from "../Cart-Item/CartItem";
 function CartDropdown({ cartItems }) {
   return (
-    <div class="cart-dropdown">
+    <div className="cart-dropdown">
       <div className="cart-items">
         {cartItems.length > 0 ? (
           cartItems.map(cartItem => (

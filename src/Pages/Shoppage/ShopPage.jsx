@@ -1,16 +1,12 @@
 import React, { Component } from "react";
 import "./ShopPage.scss";
 import { Route } from "react-router-dom";
-import CollectionPreview from "../../Components/PreviewComponent/CollectionPreview";
-import { connect } from "react-redux";
+
 import CollectionOverview from "../CollectionOverview/CollectionOverview";
 import Category from "../Category/Category";
 class ShopPage extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
-    const { collections, match } = this.props;
+    const { match } = this.props;
 
     return (
       <div>
@@ -22,8 +18,4 @@ class ShopPage extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  collections: state.shop.collections
-});
-
-export default connect(mapStateToProps)(ShopPage);
+export default ShopPage;

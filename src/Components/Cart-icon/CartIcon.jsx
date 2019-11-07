@@ -4,9 +4,6 @@ import { toggleCart } from "../../redux/cart/cart-actions";
 import { connect } from "react-redux";
 import "./CartIcon.scss";
 class CartIcon extends PureComponent {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { itemCount, toggleCart } = this.props;
 

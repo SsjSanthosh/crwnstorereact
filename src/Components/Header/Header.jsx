@@ -6,6 +6,7 @@ import { ReactComponent as Logo } from "../../assets/crown.svg";
 import { connect } from "react-redux";
 import CartIcon from "../Cart-icon/CartIcon";
 import CartDropdown from "../Cart-dropdown/CartDropdown";
+
 function Header(props) {
   return (
     <div className="Header">
@@ -19,7 +20,7 @@ function Header(props) {
         <Link to="/shop">Shop</Link>
         <Link to="/contact">Contact</Link>
         {props.currentUser ? (
-          <Link onClick={() => auth.signOut()}>Log Out</Link>
+          <span onClick={() => auth.signOut()}>Log Out</span>
         ) : (
           // from {props.currentUser.displayName.split(" ")[0]}
           <div>
