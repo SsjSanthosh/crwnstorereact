@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/crwnstorereact/precache-manifest.c38550df997450a321b364722634d95c.js"
+  "/crwnstorereact/precache-manifest.efb642e75b96f4bc4563d2ddba3f1499.js"
 );
 
 self.addEventListener('message', (event) => {
