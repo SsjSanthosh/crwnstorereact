@@ -49,6 +49,7 @@ class App extends Component {
             }
           />
           <Route exact path="/checkout" component={Checkout} />
+          <Route exact path="/crwnstorereact" component={Homepage} />
         </Switch>
       </div>
     );
